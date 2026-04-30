@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
-import toast from "react-hot-toast"; // Usando o toast que instalamos
+import toast from "react-hot-toast"; 
 
 export default function Cadastro() {
     const navigate = useNavigate();
@@ -15,10 +15,10 @@ export default function Cadastro() {
     const [mostrarSenha, setMostrarSenha] = useState(false);
     const [mostrarConfirmacao, setMostrarConfirmacao] = useState(false);
 
-    // Lógica para detectar senhas diferentes
+   
     const senhasDiferentes = confirmarSenha && form.senha !== confirmarSenha;
 
-    // --- ESSA FUNÇÃO ESTAVA FALTANDO ---
+    
     function handleChange(e) {
         const { name, value } = e.target;
         setForm((prev) => ({
@@ -38,7 +38,7 @@ export default function Cadastro() {
         }
 
         try {
-            const resposta = await fetch("http://localhost:8080/cadastro", {
+            const resposta = await fetch("http://localhost:8080/usuarios", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

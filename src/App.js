@@ -4,6 +4,7 @@ import Cadastro from "./components/Cadastro";
 import { Postos } from "./components/Postos";
 
 import { Toaster } from "react-hot-toast";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -13,9 +14,12 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro/>}/>
         <Route path="/postos" element={<Postos />} />
+        <Route path="/Dashboard" element = {<Dashboard/>} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
+      
